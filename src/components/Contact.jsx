@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaInstagram, FaWhatsapp, FaPhone } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -10,9 +11,26 @@ export default function Contact() {
   };
 
   const handleSubmit = (e) => {
+   
     e.preventDefault();
-    alert('Message sent!');
-    setFormData({ name: '', email: '', message: '' });
+
+    emailjs.sendForm(
+      'service_f70uz7k',
+      'template_zl2zttl',
+      e.target,
+      'akqebsGZogrNNw6BH'
+    ).then(
+      (result) => {
+        console.log('SUCCESS!', result.text);
+        alert('Message sent successfully!');
+      },
+      (error) => {
+        console.log('FAILED...', error);
+        alert('Message failed to send.');
+      }
+    );
+
+    e.target.reset();
   };
 
   return (
