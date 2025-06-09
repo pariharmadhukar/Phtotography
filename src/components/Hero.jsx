@@ -18,7 +18,7 @@ const Animated3D = () => {
   return (
     <group rotation={[0, 1.4, 0.5]}>
       <mesh ref={cylRef}>
-        <cylinderGeometry args={[1, 1, 1, 80, 80, true]} />
+        <cylinderGeometry args={[1, 1,1, 80, 80, true]} />
         <meshStandardMaterial
           map={texture}
           transparent
@@ -55,7 +55,7 @@ const TaglineTyping = () => (
 
 // 🧩 Canvas Wrapper
 const ModelCanvas = ({ cameraPos = [0, 0, 5] }) => (
-  <Canvas camera={{ fov: 30, position: cameraPos }}>
+  <Canvas camera={{ fov: 30, position: cameraPos }} >
     <Suspense fallback={null}>
       <OrbitControls enableZoom={false} />
       <ambientLight intensity={1.3} />
@@ -115,7 +115,7 @@ export default function Hero() {
           <TaglineTyping />
         </motion.div>
 
-        <section className="w-full h-[80vh]">
+        <section className="w-full h-[50vh]">
           <ModelCanvas cameraPos={[0, 0, 6]} />
         </section>
 
