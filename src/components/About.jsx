@@ -1,10 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaCamera, FaVideo, FaMagic, FaPhotoVideo } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import { FaCamera, FaVideo, FaMagic, FaPhotoVideo } from "react-icons/fa";
 
 export default function About() {
   return (
-    <div id="about" className="flex items-center justify-center min-h-screen w-full bg-white pt-10 pb-16 px-4 md:px-10">
+    <div
+      id="about"
+      className="flex items-center justify-center min-h-screen w-full bg-white pt-10 pb-16 px-4 md:px-10"
+    >
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +24,7 @@ export default function About() {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="/public/me2.jpeg"
+                src="/me2.jpeg"
                 alt="Photographer at work"
                 className="rounded-2xl shadow-lg object-cover w-full h-full max-h-[400px]"
               />
@@ -36,11 +39,19 @@ export default function About() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
               <p className="text-md md:text-lg leading-relaxed mb-4">
-                Hello! I'm <span className="font-semibold">Tirth</span>, a passionate photographer and visual artist specializing in storytelling through both still and motion pictures. With a strong command over Adobe Photoshop and Premiere Pro, I craft visually compelling content — from vibrant, retouched photographs to cinematic video edits.
-
+                Hello! I'm <span className="font-semibold">Tirth</span>, a
+                passionate photographer and visual artist specializing in
+                storytelling through both still and motion pictures. With a
+                strong command over Adobe Photoshop and Premiere Pro, I craft
+                visually compelling content — from vibrant, retouched
+                photographs to cinematic video edits.
               </p>
               <p className="text-md md:text-lg leading-relaxed">
-               My work is driven by emotion, precision, and a creative eye. Whether it's a candid moment or a full-scale production, I focus on delivering high-quality visuals that leave a lasting impression. Let’s transform your memories into timeless visual stories.
+                My work is driven by emotion, precision, and a creative eye.
+                Whether it's a candid moment or a full-scale production, I focus
+                on delivering high-quality visuals that leave a lasting
+                impression. Let’s transform your memories into timeless visual
+                stories.
               </p>
             </motion.div>
           </div>
