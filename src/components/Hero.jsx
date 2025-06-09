@@ -115,7 +115,7 @@ export default function Hero() {
           <TaglineTyping />
         </motion.div>
 
-        <section className="w-full h-[60vh]">
+        <section className="w-full h-[70vh]">
           <ModelCanvas cameraPos={[0, 0, 6]} />
         </section>
 
